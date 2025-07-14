@@ -27,7 +27,7 @@ spec:
         deployment: bogohttp
     spec:
       containers:
-      - image: quay.io/dwinchell_redhat/bogohttp:v1.0.amd64
+      - image: quay.io/dwinchell_redhat/bogohttp:v1.0.ppcle64
         imagePullPolicy: Always
         name: bogohttp
         ports:

@@ -13,7 +13,7 @@ echo -n 'Browse to: http://' && oc get route bogohttp -o jsonpath --template='{.
 When ready to upgrade to version 2.0:
 
 ```
-oc patch deployment/bogohttp --patch '{"spec": {"template": {"spec": {"containers": [{"name": "bogohttp", "image": "quay.io/dwinchell_redhat/bogohttp:v2.0.amd64"}]}}}}'
+oc patch deployment/bogohttp --patch '{"spec": {"template": {"spec": {"containers": [{"name": "bogohttp", "image": "quay.io/dwinchell_redhat/bogohttp:v2.0.ppcle64"}]}}}}'
 
 ```
 
