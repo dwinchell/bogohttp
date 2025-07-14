@@ -4,6 +4,8 @@ A bogus HTTP server.
 
 # OpenShift Version Demo
 
+To install:
+
 ```
 oc new-project demo
 oc create -f openshift.yaml
