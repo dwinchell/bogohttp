@@ -32,7 +32,7 @@ spec:
         - name: RAMPDOWN
           value: "30s"
       command: ["k6"]
-      args: ["run", "/k6-scripts/load-test-k6.js"
+      args: ["run", "/k6-scripts/load-test-k6.js"]
 
       volumeMounts:
         - name: k6-script-volume
