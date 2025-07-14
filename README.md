@@ -2,14 +2,14 @@
 
 A bogus HTTP server.
 
-# OpenShift Version Demo
+# OpenShift on PowerPC - Zero Downtime Demo
 
 To install:
 
 ```
 oc new-project demo
-oc create -f openshift.yaml
-echo -n 'Browse to: http://' && oc get route bogohttp -o jsonpath --template='{.status.ingress[].host}' && echo '/'
+oc create -f openshift_powerpc_zero_downtime_demo.yaml
+echo -n '***** Now Browse to: http://' && oc get route bogohttp -o jsonpath --template='{.status.ingress[].host}' && echo '/ *****'
 ```
 
 When ready to upgrade to version 2.0:
