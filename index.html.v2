@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example Application</title>
+<style>
+  body {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make body take full viewport height */
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+  }
+  h1 {
+    font-size: 10vw; /* Responsive font size based on viewport width */
+    color: black; /* Or any color you prefer for the text */
+    text-align: center;
+    font-family: sans-serif; /* Or any font you like */
+  }
+</style>
+</head>
+<body>
+
+  <h1>Version 2.0</h1>
+
+  <script>
+    // JavaScript to refresh the page every 5 seconds
+    setTimeout(function() {
+      location.reload();
+    }, 1000); // 1000 milliseconds = 1 seconds
+  </script>
+
+</body>
+</html>
