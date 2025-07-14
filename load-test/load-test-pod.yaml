@@ -6,8 +6,8 @@ spec:
   restartPolicy: Never
   securityContext:
     runAsNonRoot: true
-    runAsUser: 12345
-    fsGroup: 12345
+    # runAsUser: 12345
+    # fsGroup: 12345
     seccompProfile:
       type: RuntimeDefault
   containers:
@@ -18,11 +18,11 @@ spec:
         capabilities:
           drop:
             - ALL
-        runAsNonRoot: true
-        runAsUser: 12345
+        # runAsNonRoot: true
+        # runAsUser: 12345
       env:
         - name: URL
-          value: "http://backend.apps.my.domain.com"
+          value: "http://bogohttp.demo2.svc.cluster.local:8080"
         - name: THREADS
           value: "50"
         - name: DURATION
@@ -38,8 +38,7 @@ spec:
         - name: k6-script-volume
           mountPath: "/k6-scripts"
           readOnly: true
-
-    volumes:
-      - name: k6-script-volume
-        configMap:
-          name: k6-load-test-script
+  volumes:
+    - name: k6-script-volume
+      configMap:
+        name: k6-load-test-script
